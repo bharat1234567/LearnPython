@@ -33,7 +33,7 @@ print(list(even_squares_using_map))
 
 - As we can see again approach 2 is difficult to understand.
 
-#Dictionary Comprehensions
+# Dictionary Comprehensions
 
 ````
 d = { 'hello': 1, 'hi': 2, 'namaste': 3}
