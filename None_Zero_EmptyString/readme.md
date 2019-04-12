@@ -1,0 +1,1 @@
+# Handling None, Zero and Empty String in Python
