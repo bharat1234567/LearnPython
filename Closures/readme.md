@@ -2,7 +2,7 @@
 
 A function which is defined inside another function is known as **nested function**. Nested functions are able to access variables of the enclosing scope.
 
-```
+```python
 def outerFunction(text): 
     text = text 
   
@@ -17,7 +17,7 @@ def outerFunction(text):
 <h4>A Closure is a function object that remembers values in enclosing scopes even if they are not present in memory.</h4>
 
 
-```
+```python
 # Python program to illustrate 
 # closures 
 def outerFunction(text): 

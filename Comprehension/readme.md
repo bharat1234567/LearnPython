@@ -2,7 +2,7 @@
 - Python privides ways to convert one list to another which are called list comprehensions.
 
 Approach 1:
-````
+````python
 a = [1,2,3,4,5]
 squares = [x ** 2 for x in a]
 print(squares)
@@ -10,7 +10,7 @@ print(squares)
 
 Approach 2:
 
-````
+````python
 squares_using_map = map(lambda x:x **2, a)
 print(list(squares_using_map))
 ````
@@ -20,13 +20,13 @@ print(list(squares_using_map))
 <h4> Say we want to filter all even numbers from squares above: </h4>
 
 Approach 1:
-````
+````python
 even_squares = [x ** 2 for x in a if x % 2 == 0]
 print(even_squares)
 ````
 
 Apporach 2:
-```
+```python
 even_squares_using_map = map(lambda x: x**2, filter(lambda x: x % 2 == 0, a))
 print(list(even_squares_using_map))
 ```
@@ -35,14 +35,14 @@ print(list(even_squares_using_map))
 
 # Dictionary Comprehensions
 
-````
+````python
 d = { 'hello': 1, 'hi': 2, 'namaste': 3}
 d_inverse = {b:a for a, b in d.items()}
 ````
 
 - when we iterate over a dictionary like this
 
-```
+```python
 for item in d.items():
     print(item)
 ```
@@ -59,8 +59,8 @@ Output:
 
 - we can extract tuple to different values like this:
  
- ```
- a,b,c = ("hello",1,2)
+ ```python
+a,b,c = ("hello",1,2)
  ```
  
  - here a will get hello, b will get 1 and c will get 2.
@@ -68,7 +68,7 @@ Output:
  - so if we go this way
  
  ```
- for key, value id dict.items():
+for key, value id dict.items():
     print(key + " " + value)
  ```
  - we can get key, value seperately like above. 
@@ -91,8 +91,10 @@ print(k)
 ````
 
 - However if order doesn't matter we can store the same in another dictionary object as well. here length will always come in increasing order.
-````
+
+```
 # we can store above in dictionary as well
 
 k = { len(a) for a,b in d.items()} # here no matter what it will always be sorted
 print(k)
+'''

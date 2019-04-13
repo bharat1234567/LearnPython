@@ -24,7 +24,7 @@ This is where generators can be used.
 and then continue execution further.
 
 
-```
+```python
 def index_words_iter(text):
     if text:
         yield 0

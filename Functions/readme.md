@@ -11,7 +11,7 @@ Decorators allow us to wrap another function in order to extend the behavior of 
 
 One function can be passed to another function as a variable:
 
-````
+````python
 def myfunc():
     print("inside myfunc, execting ...")
 
@@ -27,7 +27,7 @@ wrapper_func(myfunc)
 -  when passing a function as argument, we don't give paranthesis ()
 
 
-```
+```python
 def outer_func(func):
     print("inside outer_func, before inner func is called")
     def inner_func():
@@ -54,7 +54,7 @@ inside outer_func, after inner func is called
 
 - lets execute inner function after declaration in outer function like this 
 
-```
+```python
 def outer_func1(func):
     print("inside outer_func 1, before inner func 1 is declared")
     def inner_func1():
@@ -104,4 +104,3 @@ k = outer_func1()
 
 k()
 ```
-

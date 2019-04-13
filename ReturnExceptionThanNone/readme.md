@@ -14,7 +14,7 @@ if not res:
 
 - Instead do a proper None check to avoid issues or return multiple values like:
 
-```
+```python
 def divide_returns_tuple(a,b):
     try:
         return True, a/b

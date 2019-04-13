@@ -6,18 +6,15 @@
 
 - say input value to a function is invalid, we can raise value error.
 
-```
+```python
 def check(a):
     if a < 0:
         raise ValueError(str(a) + " is invalid")
-    .
-    .. # othercode goes here
-    
 ```
 
 - we can rais Memory Error like 
 
-```
+```python
 raise MemoryError("This is an argument")
 ```
 
@@ -26,7 +23,7 @@ We can convert one of python errors and generate our own errors to handle specif
 For example
 
 
-```
+```python
 def divide(a,b):
     try:
         return True, a/b
@@ -38,7 +35,13 @@ So now in any case of b == 0 python will give zero division error which we have 
 
 where ever we call this function, lets handle it
 
-````
+````python
+def divide(a,b):
+    try:
+        return True, a/b
+    except ZeroDivisionError as e:
+        raise ValueError('Invalid Inputs') from e
+        
 try:
     result = divide(x,y)
 except ValueError:

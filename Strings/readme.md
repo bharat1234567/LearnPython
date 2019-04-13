@@ -2,7 +2,7 @@
 
 To create string with multiple variables coming at runtime use format function
 
-````
+````python
 message = "formatting can take number: {} decimal: {} string: {} ".format(89898989, 2.3, "testme")
 ````
 Output:
@@ -15,7 +15,7 @@ formatting can take number: 89898989 decimal: 2.3 string: testme
 
 if we want to break a string into (index, character) tuple then use enumerate method
 
-```
+```python
 text = "hi this is your friend"
 for item in enumerate(text):
     print(item)
