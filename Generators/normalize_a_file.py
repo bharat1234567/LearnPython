@@ -80,28 +80,3 @@ def normalize_passed_read_file(get_iter):
 percentages = normalize_passed_read_file(lambda : read_file("mynums.txt"))
 print(percentages)
 
-#Even better way to achieve the same result is using a class that implements iterator protocol.
-# read iterators readme.md to understand better
-
-# Basically when we try to run over a iterator ,__iter__ method is called.
-
-print("created a new container class, where __iter__ itself yields data")
-class ReadFileGenerator(object):
-
-    def __init__(self, file_name):
-        self.file_name = file_name
-
-    def __iter__(self):
-        with open(self.file_name) as f:
-            for line in f:
-                yield int(line)
-it = ReadFileGenerator("mynums.txt")
-percentages = normalize(it)
-print(percentages)
-
-# So what ever we send list, array etc are all containers which python knows how to traverse.
-# what we did above is defined one of our own container and used __iter method to tell it to yield results one after another.
-# In this case at the time of sum __iter__ method will be called at it will yield line by line, and sum method will keep using it and doing sum.
-# once its yielded it will be consumed then only next yield will happen.
-# next while accessing each number in for loop, again second item iter method will get called and all are yielded again , and for loop will keep using that yielded value one by one.
-# to generate results. Remeber this yielding and consumption are sequential.
