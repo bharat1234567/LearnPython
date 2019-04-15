@@ -11,9 +11,37 @@ Output:
 formatting can take number: 89898989 decimal: 2.3 string: testme
 ```
 
+Another way to do the same
+
+```python
+first_name = "a"
+middle_name = "b"
+last_name = "c"
+message = "My name is %s %s %s" % (first_name,middle_name,last_name)
+```
+
+Output:
+
+```
+My name is a b c
+```
+
+
+For numbers and decimails give %d and %f.
+
+```python
+message = "formatting can take number: %d decimal: %f string: %s " % (89898989, 2.3, "testme")
+```
+
+Output:
+
+```
+formatting can take number: 89898989 decimal: 2.300000 string: testme
+```
+
 <h4>Enumerate method</h4>
 
-if we want to break a string into (index, character) tuple then use enumerate method
+If we want to break a string into (index, character) tuple then use enumerate method
 
 ```python
 text = "hi this is your friend"
